@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        
+        <title>FilmFreaks Webapp</title>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li class="logo">FilmFreaks</li>
+                <div class="menu">
+                    <li><a href="#" id="login-btn">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Critics Forms</a></li>
+                </div>
+                <li class="search-icon">
+                    <input type = "search" placeholder="Search movies">
+                    <label class="icon">
+                        <span class="fas fa-search"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+        <div class="login-page bg-warning" id="login-page">
+            <h3>Login</h3>
+            <div class="login-inputs">
+                <label  for="mail">Mail ID
+                    <input class="ml-2" type="email" placeholder="Enter your e-mail">    
+                </label>
+                <br><br>
+                <label  for="password">Password
+                    <input type="password" placeholder="Enter your password">            
+                </label>
+                
+            </div>
+        </div>
+        <div class="carousel-container">
+            <img src="./Images/wallpaperflare.com_wallpaper.jpg" class="carousel-image" alt="Movie Poster 1">
+            <img src="./Images/msi4htu-inception-wallpapers.jpg" class="carousel-image" alt="Movie Poster 2" style="display: none;">
+            <img src="./Images/the-dark-knight-vigilantes-8k-h6-1920x1200.jpg" class="carousel-image" alt="Movie Poster 3" style="display: none;">
+            <button class="book-button">Book A Movie</button>
+        </div>
+
+        <section class="movies" id="movies">
+            <h2 class="heading">Top Movies</h2>
+        </section>
+        <div class="container">
+            <div class="scroll-container-wrapper">
+                <span class="arrow arrow-left" onclick="scrollLeft()">&#8249;</span>
+                <div class="scroll-container" id="scroll-container">
+                    <div class="movie-card">
+                        <img src="Poster/b8d5650e74e9a310c758aac692088feb_69145935-6450-4b65-8107-0224e8342221_480x.progressive.webp" class="movie-poster" alt="Movie Poster 1">
+                        <div class="movie-title">Harry Potter</div>
+                        <div class="movie-rating">Rating: 8.0</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/backtofuture.mpw_480x.progressive.webp" class="movie-poster" alt="Movie Poster 2">
+                        <div class="movie-title">B2F</div>
+                        <div class="movie-rating">Rating: 7.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/d3401e97e249c56ed1c11a13dd02b47f_480x.progressive.webp" class="movie-poster" alt="Movie Poster 3">
+                        <div class="movie-title">Dark Knight</div>
+                        <div class="movie-rating">Rating: 6.8</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/darkknight.building.24x36_20e90057-f673-4cc3-9ce7-7b0d3eeb7d83_480x.progressive.webp" class="movie-poster" alt="Movie Poster 4">
+                        <div class="movie-title">Dark Knight</div>
+                        <div class="movie-rating">Rating: 7.9</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/ItemP2658_jpg_480x.progressive.jpg" class="movie-poster" alt="Movie Poster 5">
+                        <div class="movie-title">LOTR</div>
+                        <div class="movie-rating">Rating: 8.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/LOTR.85633_480x.progressive.webp" class="movie-poster" alt="Movie Poster 6">
+                        <div class="movie-title">LOTR</div>
+                        <div class="movie-rating">Rating: 6.2</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/piratescaribbean.curseofblackpearl.24x36_480x.progressive.webp" class="movie-poster" alt="Movie Poster 7">
+                        <div class="movie-title">Pirates</div>
+                        <div class="movie-rating">Rating: 7.4</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/abca511947e2be3089c28ee6ade2b072_5bc7a357-f2ab-4ff5-a1bc-878546e3459d_480x.progressive.webp" class="movie-poster" alt="Movie Poster 8">
+                        <div class="movie-title">Indiana Jones</div>
+                        <div class="movie-rating">Rating: 8.1</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/skyfall_c668003e_480x.progressive.webp" class="movie-poster" alt="Movie Poster 9">
+                        <div class="movie-title">SkyFall</div>
+                        <div class="movie-rating">Rating: 7.3</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/4c177c2b7f7bb9a679f089bcb50f844e_3e89eb5d-ffbd-4033-a00f-e595a3ef2e2a_480x.progressive.webp" class="movie-poster" alt="Movie Poster 10">
+                        <div class="movie-title">Dunkrik</div>
+                        <div class="movie-rating">Rating: 8.7</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                </div>
+                <span class="arrow arrow-right" onclick="scrollRight()">&#8250;</span>
+            </div>
+        </div>
+        <section class="movies" id="movies">
+            <h2 class="heading">All Movies</h2>
+        </section>
+        <div class="container">
+            <div class="scroll-container-wrapper">
+                <span class="arrow arrow-left" onclick="scrollLeft()">&#8249;</span>
+                <div class="scroll-container" id="scroll-container">
+                    <div class="movie-card">
+                        <img src="All Movies/american-sniper_u-L-F7SH1T0.jpg" class="movie-poster" alt="Movie Poster 1">
+                        <div class="movie-title">American Sniper</div>
+                        <div class="movie-rating">Rating: 8.0</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/e-t-the-extra-terrestrial-1982-directed-by-steven-spielberg_u-L-Q1RLWIK0.jpg" class="movie-poster" alt="Movie Poster 2">
+                        <div class="movie-title">ET</div>
+                        <div class="movie-rating">Rating: 7.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/enter-the-dragon_u-L-F4S82I0.jpg" class="movie-poster" alt="Movie Poster 3">
+                        <div class="movie-title">Enter the Dragon</div>
+                        <div class="movie-rating">Rating: 6.8</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/interstellar_u-L-F7SGTG0.jpg" class="movie-poster" alt="Movie Poster 4">
+                        <div class="movie-title">Interstellar</div>
+                        <div class="movie-rating">Rating: 7.9</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/jaws_u-L-F9IMPK0.jpg" class="movie-poster" alt="Movie Poster 5">
+                        <div class="movie-title">Jaws</div>
+                        <div class="movie-rating">Rating: 8.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/Movie-Posters-Black-Frame-The-Godfather-Movie-Poster-Old-Movie-Posters_460x.webp" class="movie-poster" alt="Movie Poster 6">
+                        <div class="movie-title">GodFather</div>
+                        <div class="movie-rating">Rating: 6.2</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/taxi-driver-french-style_u-L-F4S8FH0.jpg" class="movie-poster" alt="Movie Poster 7">
+                        <div class="movie-title">Pirates</div>
+                        <div class="movie-rating">Rating: 7.4</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Poster/abca511947e2be3089c28ee6ade2b072_5bc7a357-f2ab-4ff5-a1bc-878546e3459d_480x.progressive.webp" class="movie-poster" alt="Movie Poster 8">
+                        <div class="movie-title">Taxi Driver</div>
+                        <div class="movie-rating">Rating: 8.1</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/the-exorcist_u-L-Q1RLWIV0.jpg" class="movie-poster" alt="Movie Poster 9">
+                        <div class="movie-title">Exorcist</div>
+                        <div class="movie-rating">Rating: 7.3</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="All Movies/the-wolf-of-wall-street_u-L-F6D1FO0.jpg" class="movie-poster" alt="Movie Poster 10">
+                        <div class="movie-title">Wolf Of the Wall Street</div>
+                        <div class="movie-rating">Rating: 8.7</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                </div>
+                <span class="arrow arrow-right" onclick="scrollRight()">&#8250;</span>
+            </div>
+        </div>
+        <section class="movies" id="movies">
+            <h2 class="heading">TV Shows</h2>
+        </section>
+        <div class="container">
+            <div class="scroll-container-wrapper">
+                <span class="arrow arrow-left" onclick="scrollLeft()">&#8249;</span>
+                <div class="scroll-container" id="scroll-container">
+                    <div class="movie-card">
+                        <img src="Tv Shows/2953dde8418ea82dd32c5e17523fe0fb.jpg" class="movie-poster" alt="Movie Poster 1">
+                        <div class="movie-title">Pink Ladies</div>
+                        <div class="movie-rating">Rating: 8.0</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/BreakingBad-BryanCranston-Heisenberg-TVShowPoster9_2ef2f86e-9ac1-4f34-998f-1b68d17ce018.jpg" class="movie-poster" alt="Movie Poster 2">
+                        <div class="movie-title">BB</div>
+                        <div class="movie-rating">Rating: 9.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/cc325c118612f4ca645b1cea01026ffd.jpg" class="movie-poster" alt="Movie Poster 3">
+                        <div class="movie-title">Social Dilemma</div>
+                        <div class="movie-rating">Rating: 6.8</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/cd5048cabd2fc15b0241399203fd6d78.jpg" class="movie-poster" alt="Movie Poster 4">
+                        <div class="movie-title">Stranger Things</div>
+                        <div class="movie-rating">Rating: 7.9</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/friends-apartment_u-L-F9DGXF0.jpg" class="movie-poster" alt="Movie Poster 5">
+                        <div class="movie-title">Friends</div>
+                        <div class="movie-rating">Rating: 8.5</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/little-quacker-l-r-jerry-the-mouse-little-quacker-tom-the-cat-on-poster-art-1950_u-L-Q1HX7IY0.jpg" class="movie-poster" alt="Movie Poster 6">
+                        <div class="movie-title">Tom & Jerry</div>
+                        <div class="movie-rating">Rating: 6.2</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/medium-suits01-suits-tv-series-poster-suits-framed-poster-for-original-imafvfn4tk8vxyzj.webp" class="movie-poster" alt="Movie Poster 7">
+                        <div class="movie-title">Suits</div>
+                        <div class="movie-rating">Rating: 8.4</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/PB5.webp" class="movie-poster" alt="Movie Poster 8">
+                        <div class="movie-title">Peaky Blinders</div>
+                        <div class="movie-rating">Rating: 8.1</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/star-wars-the-mandalorian-group_u-L-FAAQDP0.jpg" class="movie-poster" alt="Movie Poster 9">
+                        <div class="movie-title">Star Wars</div>
+                        <div class="movie-rating">Rating: 7.3</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="Tv Shows/trends-international-game-of-thrones-the-battle_u-L-Q1RFW400.jpg" class="movie-poster" alt="Movie Poster 10">
+                        <div class="movie-title">Game Of Thrones</div>
+                        <div class="movie-rating">Rating: 8.7</div>
+                        <a href="#" target="_blank" class="btn btn-primary trailer-button">Watch Trailer</a>
+                    </div>
+                </div>
+                <span class="arrow arrow-right" onclick="scrollRight()">&#8250;</span>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="subscribe-section">
+                <input type="email" class="email-input" placeholder="Enter your email">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+            <p class="follow-us">Follow us on social media</p>
+            <div class="social-media-icons">
+                <a href="#" class="social-icon"><img src="Icons/icons8-facebook-32.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="Icons/icons8-twitterx-24.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="Icons/icons8-instagram-64.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    
+    
+        <script type="text/javascript" src="./jsscript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        
+    </body>
